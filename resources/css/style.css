@@ -1,0 +1,11 @@
+#cart-block {
+	min-height: 75vh;
+}
+
+#transaction-block {
+	min-height: 85vh;
+}
+.remove-icon {
+	cursor: pointer;
+	color: #dd4b39;
+}
