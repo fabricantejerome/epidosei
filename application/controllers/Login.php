@@ -16,10 +16,21 @@ class Login extends CI_Controller {
 	{
 		$this->twig->display('login');
 	}
+
+	public function register()
+	{
+		$this->twig->display('register');
+	}
 	
 	public function template()
 	{
 		$this->twig->display('partials/template');
+	}
+
+	public function signup()
+	{
+		echo '<pre>';
+		print_r($this->input->post());
 	}
     
 }
