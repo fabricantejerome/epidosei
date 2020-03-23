@@ -15,6 +15,11 @@ class Login extends CI_Controller {
 	public function index()
 	{
 		$this->twig->display('login');
-    }
+	}
+	
+	public function template()
+	{
+		$this->twig->display('partials/template');
+	}
     
 }
