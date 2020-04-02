@@ -19,12 +19,20 @@
 
 	<!-- Google Font -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+	<style>
+		img.logo.img.img-responsive {
+			height: 220px;
+			margin: auto;
+		}
+	</style>
 </head>
 <body class="hold-transition login-page">
+	<img class="logo img img-responsive" src="{{ base_url('resources/images/epidoseis.jpg') }}" alt="">
 	<div class="login-box">
 
 		<div class="login-logo">
-			<b><a href="{{ base_url('login') }}">Epidoseis</a></b>
+			<!-- {# <b><a href="{{ base_url('login') }}">Epidoseis</a></b> #} -->
 		</div>
 		<!-- /.login-logo -->
 		<div class="login-box-body">

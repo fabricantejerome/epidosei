@@ -4,7 +4,7 @@
 	{% block head %}
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>POS</title>
+		<title>Epidoseis</title>
 		<!-- Tell the browser to be responsive to screen width -->
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 		<!-- Bootstrap 3.3.7 -->
@@ -26,6 +26,13 @@
 
 		<!-- Google Font -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+		<style>
+			.logo.img {
+				height: 200px;
+				width: 100%;
+			}
+		</style>
 	{% endblock %}
 </head>
 <body class="hold-transition skin-purple-light sidebar-mini">
@@ -42,9 +49,11 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 				<h1>{{ title }}</h1>
+				<img class="logo img" src="{{ base_url('resources/images/epidoseis.jpg') }}" alt="">
 			</section>
 
 			{% block content %}
+				
 			{% endblock %}
 		</div>
 		<!-- /.content-wrapper -->

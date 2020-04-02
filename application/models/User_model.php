@@ -20,7 +20,20 @@ class User_model extends CI_Model {
 
     public function read($params)
     {
-        $query = $this->db->get_where('users', $params);
+        $fields = array(
+            "id",
+            "firstname",
+            "surname",
+            "CONCAT(firstname, ' ', mi, ' ', surname) AS fullname",
+            "username",
+            "email",
+            "file_name"
+        );
+
+        $query = $this->db->select($fields)
+                ->from('users')
+                ->where($params)
+                ->get();
 
         return $query->row_array();
     }

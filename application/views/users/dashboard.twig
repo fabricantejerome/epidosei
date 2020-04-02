@@ -1,0 +1,48 @@
+{% extends "partials/template.twig" %}
+
+{% block head %}
+    {{ parent() }}
+    <style>
+        img.img.img-responsive {
+            border: 1px solid #000;
+        }
+
+        .container {
+            margin-top: 10px;
+        }
+
+        q {
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        .dividend-label {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-3 text-center">
+                <img src="{{ session.file_name ? base_url('resources/images/uploads/' ~ session.file_name) : base_url('resources/images/default.png') }}" class="img img-responsive" alt="">
+                <h4>{{ session.fullname }}</h4>
+                <h4>Share Holder</h4>
+            </div>
+
+            <div class="col-md-6">
+                <q>The real magic of investment is that you make money on the money!</q>
+
+                <div class="form-group">
+                    <label class="dividend-label">Available Dividend</label>
+                    <input class="form-control input-lg" type="text" name="dividend" id="" value="P290,000.00">
+                </div>
+                <button class="btn btn-primary btn-block">Claim</button>
+            </div>
+        </div>
+    </div>
+{% endblock %}

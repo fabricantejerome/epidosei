@@ -37,7 +37,31 @@
 					<li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
 				</ul>
 			</li> -->
-			{% if session.user_type in ['Administrator'] %}
+			<li>
+				<a href=""><i class="fa fa-user"></i><span>Profile</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-lock"></i><span>Activate</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-plus"></i><span>Add fund</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-dollar"></i><span>Savings</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-file"></i><span>Transaction</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-money"></i><span>Loan</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-pencil"></i><span>Policy</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-gear"></i><span>Settings</span></a>
+			</li>
+			{# {% if session.user_type in ['Administrator'] %}
 				<li class="{{ uri.uri_string == 'user' ? 'active' : '' }}">
 					<a href="{{ base_url('user/') }}"><i class="fa fa-user"></i><span>Users</span></a>
 				</li>
@@ -71,7 +95,7 @@
 				<li class="{{ uri.uri_string == 'transaction/sales' ? 'active' : '' }}">
 					<a href="{{ base_url('transaction/sales') }}"><i class="fa fa-money"></i><span>Sales</span></a>
 				</li>
-			{% endif %}
+			{% endif %} #}
 		</ul>
 		</ul>
 	</section>

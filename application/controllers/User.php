@@ -10,7 +10,14 @@ class User extends CI_Controller {
 		$this->load->helper(['form', 'url']);
 		$this->twig->addGlobal('session', $this->session);
 		$this->twig->addGlobal('uri', $this->uri);
-    }
+	}
+	
+	public function dashboard()
+	{
+		// echo '<pre>';
+		// print_r($this->session->userdata()); die;
+		$this->twig->display('users/dashboard');
+	}
     
     public function handle_register()
 	{

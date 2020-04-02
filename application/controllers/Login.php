@@ -31,8 +31,8 @@ class Login extends CI_Controller {
 
 		if ($user)
 		{
-			$this->session->set_userdata($user_data);
-			redirect(base_url('login/template'));
+			$this->session->set_userdata($user);
+			redirect(base_url('user/dashboard'));
 		}
 		else {
 			$this->session->set_flashdata('message', "<div class='alert alert-danger'><button type='button' class='close' data-dismiss='alert' aria-hidden='true'>×</button>Either your username or password is incorrect</div>");
